@@ -311,7 +311,7 @@ export default function Home() {
       maxWidth: '970px', // 최대 너비 970px로 제한
       width: '100%',     // 부모 컨테이너에 맞춰 100% 너비
       margin: '0 auto',  // 화면 가운데 정렬
-      padding: '20px'    // 화면의 여백
+      padding: '5px'    // 화면의 여백
     }}
   >
     <DndProvider backend={HTML5Backend}>
@@ -321,8 +321,8 @@ export default function Home() {
 
 
         <GoogleMap
-          mapContainerStyle={{ width: '100%', height: '500px' }}
-          center={{ lat: 46.8182, lng: 8.2275 }}
+          mapContainerStyle={{ width: '100%', paddingBottom: '60%' }}
+          center={{ lat: 46.8182, lng: 8.0000 }}
           zoom={8}
           options={{
             disableDefaultUI: true,
