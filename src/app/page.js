@@ -18,7 +18,7 @@ const cities = [
     { name: '피르스트 First', lat: 46.6589, lng: 8.0521, price: 91.6, url: 'https://cafe.naver.com/swissfriends/57960' },
     { name: '멘리헨 Mannlichen', lat: 46.6181, lng: 7.9380, price: 90, url: 'https://cafe.naver.com/swissfriends/55622' },
     { name: '뮈렌 Murren', lat: 46.5610, lng: 7.8827, price: 39.2, url: 'https://cafe.naver.com/swissfriends/60147' },
-    { name: '쉬니케 플라테 Schynige platte', lat: 46.6552, lng: 7.8875, price: 71.6, url: 'https://cafe.naver.com/swissfriends/55816' },
+    { name: '쉬니케 플라테 Schynige', lat: 46.6552, lng: 7.8875, price: 71.6, url: 'https://cafe.naver.com/swissfriends/55816' },
     { name: '하더 쿨름 Harder Kulm', lat: 46.6974, lng: 7.8311, price: 38, url: 'https://cafe.naver.com/swissfriends/59997' },
   ] },
   { name: 'Grindelwald', lat: 46.6242, lng: 8.0414, image: '/images/grindelwald.jpg', url: 'https://cafe.naver.com/swissfriends/59687', attractions: [
@@ -26,7 +26,7 @@ const cities = [
     { name: '피르스트 First', lat: 46.6589, lng: 8.0521, price: 68, url: 'https://cafe.naver.com/swissfriends/57960' },
     { name: '멘리헨 Mannlichen', lat: 46.6181, lng: 7.9380, price: 74, url: 'https://cafe.naver.com/swissfriends/55622' },
     { name: '뮈렌 Murren', lat: 46.5610, lng: 7.8827, price: 42.4, url: 'https://cafe.naver.com/swissfriends/60147' },
-    { name: '쉬니케 플라테 Schynige platte', lat: 46.6552, lng: 7.8875, price: 84.4, url: 'https://cafe.naver.com/swissfriends/55816' },
+    { name: '쉬니케 플라테 Schynige', lat: 46.6552, lng: 7.8875, price: 84.4, url: 'https://cafe.naver.com/swissfriends/55816' },
     { name: '하더 쿨름 Harder Kulm', lat: 46.6974, lng: 7.8311, price: 46, url: 'https://cafe.naver.com/swissfriends/59997' },
   ] },
   { name: 'Luzern', lat: 47.0502, lng: 8.3093, image: '/images/luzern.jpg', url: 'https://cafe.naver.com/swissfriends/45996', attractions: [
@@ -40,7 +40,7 @@ const cities = [
     { name: '고르너그라트 Gornergrat', lat: 45.9836, lng: 7.7859, price: 126, url: 'https://cafe.naver.com/swissfriends/64892' },
     { name: '수네가 Sunnegga', lat: 46.0168, lng: 7.7692, price: 28.5, url: 'https://cafe.naver.com/swissfriends/44734' },
     { name: '블라우헤르트 Blauherd', lat: 46.0196, lng: 7.7682, price: 58.5, url: 'https://cafe.naver.com/swissfriends/44734' },
-    { name: 'Matterhorn Glacier Paradise', lat: 45.9384, lng: 7.7275, price: 120, url: 'https://cafe.naver.com/swissfriends/28650' },
+    { name: 'Matterhorn Glacier', lat: 45.9384, lng: 7.7275, price: 120, url: 'https://cafe.naver.com/swissfriends/28650' },
   ] },
   { name: 'Zurich', lat: 47.3769, lng: 8.5417, image: '/images/zurich.jpg', url: 'https://cafe.naver.com/swissfriends/52570' },
   { name: 'Basel', lat: 47.5596, lng: 7.5886, image: '/images/basel.jpg', url: 'https://cafe.naver.com/swissfriends/80' },
@@ -326,7 +326,7 @@ export default function Home() {
           zoom={8}
           options={{
             disableDefaultUI: true,
-            gestureHandling: "none"
+            // gestureHandling: "none"
         }}
         >
           {selectedCities.map((city) => (
@@ -443,7 +443,7 @@ export default function Home() {
                 width: '45%'                 // 부모 요소 기준 너비 45% 설정
               }}
             >
-              <h4>Swiss Travel Pass</h4>
+              <h5>Swiss Travel Pass</h5>
               {Object.entries(SWISS_PASS_PRICES).map(([key, price]) => (
                 <div className="form-check" key={key}>
                   <input
@@ -471,7 +471,7 @@ export default function Home() {
                 display: 'inline-block',     // 인라인 블록
                 width: '45%'                 // 부모 요소 기준 너비 45% 설정
             }}>
-              <h4>Jungfrau VIP Pass</h4>
+              <h5>Jungfrau VIP Pass</h5>
               {Object.entries(JUNGFRAU_VIP_PRICES).map(([key, price]) => (
                 <div className="form-check" key={key}>
                   <input
