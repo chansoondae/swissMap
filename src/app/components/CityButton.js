@@ -14,6 +14,7 @@ function CityButton({ city, handleCityClick }) {
         background: 'none',
         border: 'none',
         padding: 0,
+        marginBottom: '10px',
         cursor: 'pointer',
         display: 'flex',
         flexDirection: 'column',
@@ -31,7 +32,7 @@ function CityButton({ city, handleCityClick }) {
           height: '60px',
           borderRadius: '50%',
           overflow: 'hidden',
-          marginBottom: '8px',
+          marginBottom: '2px',
           background: 'linear-gradient(145deg, #ffffff, #d1cdc7)',
           boxShadow: '4px 4px 8px rgba(0, 0, 0, 0.15), -4px -4px 8px rgba(255, 255, 255, 0.7)',
           transition: 'transform 0.2s ease, box-shadow 0.2s ease',
@@ -48,9 +49,9 @@ function CityButton({ city, handleCityClick }) {
       </div>
       <span
         style={{
-          fontSize: '14px',
+          fontSize: '12px',
           color: 'var(--foreground)',
-          marginTop: '8px',
+          marginTop: '4px',
           textAlign: 'center',
         }}
       >
