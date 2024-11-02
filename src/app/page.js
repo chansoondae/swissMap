@@ -8,44 +8,46 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import * as XLSX from 'xlsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CityButtonList from './components/CityButtonList';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 
 const cities = [
-  { name: 'Interlaken', lat: 46.6863, lng: 7.8632, image: '/images/interlaken.jpg', attractions: [
-    { name: '융프라우 Jungfrau', lat: 46.5483, lng: 7.9395, price: 160 },
-    { name: '피르스트 First', lat: 46.6589, lng: 8.0521, price: 91.6 },
-    { name: '멘리헨 Mannlichen', lat: 46.6181, lng: 7.9380, price: 90 },
-    { name: '뮈렌 Murren', lat: 46.5610, lng: 7.8827, price: 39.2 },
-    { name: '쉬니케 플라테 Schynige platte', lat: 46.6552, lng: 7.8875, price: 71.6 },
-    { name: '하더 쿨름 Harder Kulm', lat: 46.6974, lng: 7.8311, price: 38 },
+  { name: 'Interlaken', lat: 46.6863, lng: 7.8632, image: '/images/interlaken.jpg', url: 'https://cafe.naver.com/swissfriends/59840', attractions: [
+    { name: '융프라우 Jungfrau', lat: 46.5483, lng: 7.9395, price: 160, url: 'https://cafe.naver.com/swissfriends/57880' },
+    { name: '피르스트 First', lat: 46.6589, lng: 8.0521, price: 91.6, url: 'https://cafe.naver.com/swissfriends/57960' },
+    { name: '멘리헨 Mannlichen', lat: 46.6181, lng: 7.9380, price: 90, url: 'https://cafe.naver.com/swissfriends/55622' },
+    { name: '뮈렌 Murren', lat: 46.5610, lng: 7.8827, price: 39.2, url: 'https://cafe.naver.com/swissfriends/60147' },
+    { name: '쉬니케 플라테 Schynige platte', lat: 46.6552, lng: 7.8875, price: 71.6, url: 'https://cafe.naver.com/swissfriends/55816' },
+    { name: '하더 쿨름 Harder Kulm', lat: 46.6974, lng: 7.8311, price: 38, url: 'https://cafe.naver.com/swissfriends/59997' },
   ] },
-  { name: 'Grindelwald', lat: 46.6242, lng: 8.0414, image: '/images/grindelwald.jpg', attractions: [
-    { name: '융프라우 Jungfrau', lat: 46.5483, lng: 7.9395, price: 160 },
-    { name: '피르스트 First', lat: 46.6589, lng: 8.0521, price: 68 },
-    { name: '멘리헨 Mannlichen', lat: 46.6181, lng: 7.9380, price: 74 },
-    { name: '뮈렌 Murren', lat: 46.5610, lng: 7.8827, price: 42.4 },
-    { name: '쉬니케 플라테 Schynige platte', lat: 46.6552, lng: 7.8875, price: 84.4 },
-    { name: '하더 쿨름 Harder Kulm', lat: 46.6974, lng: 7.8311, price: 46 },
+  { name: 'Grindelwald', lat: 46.6242, lng: 8.0414, image: '/images/grindelwald.jpg', url: 'https://cafe.naver.com/swissfriends/59687', attractions: [
+    { name: '융프라우 Jungfrau', lat: 46.5483, lng: 7.9395, price: 160, url: 'https://cafe.naver.com/swissfriends/57880' },
+    { name: '피르스트 First', lat: 46.6589, lng: 8.0521, price: 68, url: 'https://cafe.naver.com/swissfriends/57960' },
+    { name: '멘리헨 Mannlichen', lat: 46.6181, lng: 7.9380, price: 74, url: 'https://cafe.naver.com/swissfriends/55622' },
+    { name: '뮈렌 Murren', lat: 46.5610, lng: 7.8827, price: 42.4, url: 'https://cafe.naver.com/swissfriends/60147' },
+    { name: '쉬니케 플라테 Schynige platte', lat: 46.6552, lng: 7.8875, price: 84.4, url: 'https://cafe.naver.com/swissfriends/55816' },
+    { name: '하더 쿨름 Harder Kulm', lat: 46.6974, lng: 7.8311, price: 46, url: 'https://cafe.naver.com/swissfriends/59997' },
   ] },
-  { name: 'Luzern', lat: 47.0502, lng: 8.3093, image: '/images/luzern.jpg', attractions: [
-    { name: '리기산 Rigi', lat: 47.0449, lng: 8.4836, price: 78 },
-    { name: '슈탄저호른 Stanserhorn', lat: 46.9784, lng: 8.2565, price: 82 },
-    { name: '필라투스 Pilatus', lat: 46.9784, lng: 8.2565, price: 72 },
-    { name: '티틀리스 Titlis', lat: 46.9784, lng: 8.2565, price: 96 },
-    { name: '슈토스 Stoos', lat: 46.9784, lng: 8.2565, price: 56 },
+  { name: 'Luzern', lat: 47.0502, lng: 8.3093, image: '/images/luzern.jpg', url: 'https://cafe.naver.com/swissfriends/45996', attractions: [
+    { name: '리기산 Rigi', lat: 47.0449, lng: 8.4836, price: 78, url: 'https://cafe.naver.com/swissfriends/52888' },
+    { name: '슈탄저호른 Stanserhorn', lat: 46.9784, lng: 8.2565, price: 82, url: 'https://cafe.naver.com/swissfriends/61349' },
+    { name: '필라투스 Pilatus', lat: 46.9784, lng: 8.2565, price: 72, url: 'https://cafe.naver.com/swissfriends/61653' },
+    { name: '티틀리스 Titlis', lat: 46.9784, lng: 8.2565, price: 96, url: 'https://cafe.naver.com/swissfriends/61592' },
+    { name: '슈토스 Stoos', lat: 46.9784, lng: 8.2565, price: 56, url: 'https://cafe.naver.com/swissfriends/61619' },
   ] },
-  { name: 'Zermatt', lat: 46.0207, lng: 7.7491, image: '/images/zermatt.jpg', attractions: [
-    { name: '고르너그라트 Gornergrat', lat: 45.9836, lng: 7.7859, price: 126 },
-    { name: '수네가 Sunnegga', lat: 46.0168, lng: 7.7692, price: 28.5 },
-    { name: '블라우헤르트 Blauherd', lat: 46.0196, lng: 7.7682, price: 58.5 },
-    { name: 'Matterhorn Glacier Paradise', lat: 45.9384, lng: 7.7275, price: 120 },
+  { name: 'Zermatt', lat: 46.0207, lng: 7.7491, image: '/images/zermatt.jpg', url: 'https://cafe.naver.com/swissfriends/50186', attractions: [
+    { name: '고르너그라트 Gornergrat', lat: 45.9836, lng: 7.7859, price: 126, url: 'https://cafe.naver.com/swissfriends/64892' },
+    { name: '수네가 Sunnegga', lat: 46.0168, lng: 7.7692, price: 28.5, url: 'https://cafe.naver.com/swissfriends/44734' },
+    { name: '블라우헤르트 Blauherd', lat: 46.0196, lng: 7.7682, price: 58.5, url: 'https://cafe.naver.com/swissfriends/44734' },
+    { name: 'Matterhorn Glacier Paradise', lat: 45.9384, lng: 7.7275, price: 120, url: 'https://cafe.naver.com/swissfriends/28650' },
   ] },
-  { name: 'Zurich', lat: 47.3769, lng: 8.5417, image: '/images/zurich.jpg' },
-  { name: 'Basel', lat: 47.5596, lng: 7.5886, image: '/images/basel.jpg' },
-  { name: 'Bern', lat: 46.948, lng: 7.4474, image: '/images/bern.jpg' },
-  { name: 'Montreux', lat: 46.4312, lng: 6.9107, image: '/images/montreux.jpg' },
-  { name: 'Geneva', lat: 46.2044, lng: 6.1432, image: '/images/geneva.jpg' },
-  { name: 'Lausanne', lat: 46.5197, lng: 6.6323, image: '/images/lausanne.jpg' },
+  { name: 'Zurich', lat: 47.3769, lng: 8.5417, image: '/images/zurich.jpg', url: 'https://cafe.naver.com/swissfriends/52570' },
+  { name: 'Basel', lat: 47.5596, lng: 7.5886, image: '/images/basel.jpg', url: 'https://cafe.naver.com/swissfriends/80' },
+  { name: 'Bern', lat: 46.948, lng: 7.4474, image: '/images/bern.jpg', url: 'https://cafe.naver.com/swissfriends/45914' },
+  { name: 'Montreux', lat: 46.4312, lng: 6.9107, image: '/images/montreux.jpg', url: 'https://cafe.naver.com/swissfriends/59653' },
+  { name: 'Geneva', lat: 46.2044, lng: 6.1432, image: '/images/geneva.jpg', url: 'https://cafe.naver.com/swissfriends/22546' },
+  { name: 'Lausanne', lat: 46.5197, lng: 6.6323, image: '/images/lausanne.jpg', url: 'https://cafe.naver.com/swissfriends/28715' },
 ];
 
 const DraggableCity = ({ city, index, moveCity, deleteCity, handleAttractionChange }) => {
@@ -79,7 +81,15 @@ const DraggableCity = ({ city, index, moveCity, deleteCity, handleAttractionChan
             fontSize: '18px', // 원하는 폰트 크기로 설정
             fontWeight: 'bold', // 필요 시 폰트 두께도 설정
           }}
-          > 📍{city.name}</span>
+          > 📍{city.name} <a 
+              href={city.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-link"
+            >
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="fa-fw" style={{ marginRight: '5px' }} />
+          </a></span>
+
         <button
           onClick={() => deleteCity(city.id)}
           className="btn btn-danger btn-sm"
@@ -101,6 +111,14 @@ const DraggableCity = ({ city, index, moveCity, deleteCity, handleAttractionChan
               />
               <label className="form-check-label" htmlFor={`${city.id}-${attraction.name}`}>
                 {attraction.name}
+                <a 
+                  href={attraction.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-link"
+                >
+                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="fa-fw" style={{ marginRight: '5px' }} />
+                </a>
               </label>
             </div>
           ))}
@@ -141,9 +159,9 @@ export default function Home() {
   // 선택된 패스 가격의 합계 계산
   const sumPass = selectedSwissPass + selectedJungfrauPass;
 
-    // 더 작은 값을 확인하여 이모지 표시
-    const totalCostBadge = totalCost < sumPass ? ' 👍' : '';
-    const sumBadge = sumPass < totalCost ? ' 👍' : '';
+  // 추천 배지 설정
+  const isTotalCostRecommended = totalCost < sumPass;
+  const isSumPassRecommended = sumPass < totalCost;
 
   // Load transport cost data from Excel file on component mount
   useEffect(() => {
@@ -333,30 +351,54 @@ export default function Home() {
             path={cityPath}
             options={{ strokeColor: '#FF0000', strokeWeight: 2 }}
           />
-          {attractionPaths.map((path, index) => (
+          {/* {attractionPaths.map((path, index) => (
             <Polyline
               key={`attraction-polyline-${index}`}
               path={[path.parent, path.child]}
               options={{ strokeColor: '#FFFF00', strokeWeight: 2 }}
             />
-          ))}
+          ))} */}
         </GoogleMap>
         <div style={{ marginTop: '20px' }}>
-          <h2>Itinerary</h2>
+          <h2>여행 일정표</h2>
           <ul style={{ listStyleType: 'none', padding: 0}}>
             {selectedCities.map((city, index) => (
               <DraggableCity 
                 key={city.id} 
                 city={city} 
                 index={index} 
-                moveCity={moveCity} 
+                moveCity={moveCity}
                 deleteCity={handleDeleteCity} 
                 handleAttractionChange={handleAttractionChange}
               />
             ))}
           </ul>
-          <h2>Total Transport Cost: <span style={{ color: 'red' }}>CHF {totalCost}{totalCostBadge}</span></h2>
-          {/* <h3>Segment Costs:</h3> */}
+          <div
+            style={{
+              backgroundColor: isTotalCostRecommended ? '#fff4e6' : 'transparent',  // 추천일 때만 배경색
+              border: isTotalCostRecommended ? '2px solid #ffa726' : 'none',         // 추천일 때만 테두리
+              borderRadius: '8px',
+              padding: '10px',
+              marginBottom: '15px'
+            }}
+          >
+            {isTotalCostRecommended && (
+                <span style={{
+                  backgroundColor: '#ffa726',
+                  color: '#fff',
+                  padding: '5px 10px',
+                  borderRadius: '4px',
+                  fontWeight: 'bold',
+                  display: 'inline-block',
+                  marginTop: '5px',
+                  marginBottom: '10px'
+                }}>
+                  Recommend
+                </span>
+              )}
+            <h2>구간권 합계: <span style={{ color: 'red' }}>CHF {totalCost}</span></h2>
+            
+          </div>
           <ul>
             {segmentCosts.map((segment, index) => (
               <li key={index}>{segment}</li>
@@ -365,7 +407,31 @@ export default function Home() {
         </div>
         {/* 스위스 트래블 패스 및 융프라우 VIP 패스 선택 */}
         <div style={{ marginTop: '20px', borderTop: '1px solid #ddd', paddingTop: '20px' }}>
-          <h2>Pass Price : <span style={{ color: 'red' }}> CHF {sumPass}{sumBadge}</span></h2>
+          <div
+              style={{
+                backgroundColor: isSumPassRecommended ? '#e3f2fd' : 'transparent',  // 추천일 때만 배경색
+                border: isSumPassRecommended ? '2px solid #42a5f5' : 'none',        // 추천일 때만 테두리
+                borderRadius: '8px',
+                padding: '10px',
+                marginBottom: '15px'
+              }}
+            >
+            {isSumPassRecommended && (
+              <span style={{
+                backgroundColor: '#42a5f5',
+                color: '#fff',
+                padding: '5px 10px',
+                borderRadius: '4px',
+                fontWeight: 'bold',
+                display: 'inline-block',
+                marginTop: '5px',
+                marginBottom: '10px'
+              }}>
+                Recommend
+              </span>
+            )}  
+            <h2>패스 합계: <span style={{ color: 'red' }}>CHF {sumPass}</span></h2>
+          </div>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'space-around' }}>
             {/* Swiss Travel Pass */}
             <div
