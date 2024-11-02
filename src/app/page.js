@@ -218,7 +218,7 @@ export default function Home() {
       });
     });
 
-    setTotalCost(cost);
+    setTotalCost(parseFloat(cost.toFixed(1)));
     setSegmentCosts(segments);
   }, [selectedCities, transportCosts]);
 
@@ -316,7 +316,7 @@ export default function Home() {
   >
     <DndProvider backend={HTML5Backend}>
       <div style={{ padding: "10px" }}>
-        <h1>🇨🇭Swiss Planner</h1>
+        <h1>🇨🇭Swiss Planner (구간권 계산기)</h1>
         <CityButtonList cities={cities} handleCityClick={handleCityClick} />
 
 
