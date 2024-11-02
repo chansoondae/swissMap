@@ -31,7 +31,7 @@ const cities = [
   ] },
   { name: 'Luzern', lat: 47.0502, lng: 8.3093, image: '/images/luzern.jpg', url: 'https://cafe.naver.com/swissfriends/45996', attractions: [
     { name: '리기산 Rigi', lat: 47.0449, lng: 8.4836, price: 78, price_sp: 0, url: 'https://cafe.naver.com/swissfriends/52888' },
-    { name: '슈탄저호른 Stanserhorn', lat: 46.9784, lng: 8.2565, price: 82, price_sp: 0, url: 'https://cafe.naver.com/swissfriends/61349' },
+    { name: '슈탄저호른 Stanser', lat: 46.9784, lng: 8.2565, price: 82, price_sp: 0, url: 'https://cafe.naver.com/swissfriends/61349' },
     { name: '필라투스 Pilatus', lat: 46.9784, lng: 8.2565, price: 72, price_sp: 36, url: 'https://cafe.naver.com/swissfriends/61653' },
     { name: '티틀리스 Titlis', lat: 46.9784, lng: 8.2565, price: 96, price_sp: 48, url: 'https://cafe.naver.com/swissfriends/61592' },
     { name: '슈토스 Stoos', lat: 46.9784, lng: 8.2565, price: 56, price_sp: 0, url: 'https://cafe.naver.com/swissfriends/61619' },
@@ -208,7 +208,7 @@ export default function Home() {
       const cityA = selectedCities[i].name;
       const cityB = selectedCities[i + 1].name;
       const segmentCost = transportCosts[`${cityA}-${cityB}`] || 0;
-      segments.push(`${cityA} -> ${cityB}: CHF ${segmentCost}`);
+      segments.push(`🚄 ${cityA} -> ${cityB}: CHF ${segmentCost}`);
       cost += segmentCost;
     }
 
@@ -216,8 +216,8 @@ export default function Home() {
     selectedCities.forEach((city) => {
       city.attractions.forEach((attraction) => {
         if (attraction.selected) {
-          segments.push(`${city.name} <-> ${attraction.name}: CHF ${attraction.price}`);
-          segmentsSPExtra.push(`${city.name} <-> ${attraction.name}: CHF ${attraction.price_sp}`);
+          segments.push(`🚞 ${city.name} <-> ${attraction.name}: CHF ${attraction.price}`);
+          segmentsSPExtra.push(`🚞 ${city.name} <-> ${attraction.name}: CHF ${attraction.price_sp}`);
           cost += attraction.price;
           cost_sp_extra += attraction.price_sp;
         }
@@ -407,7 +407,7 @@ export default function Home() {
             <h2>구간권 합계: <span style={{ color: 'red' }}>CHF {totalCost}</span></h2>
             
           </div>
-          <ul>
+          <ul style={{ listStyleType: 'none', padding: 0, marginLeft: '20px'}}>
             {segmentCosts.map((segment, index) => (
               <li key={index}>{segment}</li>
             ))}
@@ -480,7 +480,7 @@ export default function Home() {
                 width: '45%'                 // 부모 요소 기준 너비 45% 설정
             }}>
               <h5>추가 산악열차</h5>
-              <ul>
+              <ul style={{ listStyleType: 'none', padding: 0}}>
                 {segmentCostsSPExtra.map((segment, index) => (
                   <li key={index}>{segment}</li>
                 ))}
