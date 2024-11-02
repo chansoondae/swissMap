@@ -14,33 +14,33 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const cities = [
   { name: 'Interlaken', lat: 46.6863, lng: 7.8632, image: '/images/interlaken.jpg', url: 'https://cafe.naver.com/swissfriends/59840', attractions: [
-    { name: '융프라우 Jungfrau', lat: 46.5483, lng: 7.9395, price: 160, url: 'https://cafe.naver.com/swissfriends/57880' },
-    { name: '피르스트 First', lat: 46.6589, lng: 8.0521, price: 91.6, url: 'https://cafe.naver.com/swissfriends/57960' },
-    { name: '멘리헨 Mannlichen', lat: 46.6181, lng: 7.9380, price: 90, url: 'https://cafe.naver.com/swissfriends/55622' },
-    { name: '뮈렌 Murren', lat: 46.5610, lng: 7.8827, price: 39.2, url: 'https://cafe.naver.com/swissfriends/60147' },
-    { name: '쉬니케 플라테 Schynige', lat: 46.6552, lng: 7.8875, price: 71.6, url: 'https://cafe.naver.com/swissfriends/55816' },
-    { name: '하더 쿨름 Harder Kulm', lat: 46.6974, lng: 7.8311, price: 38, url: 'https://cafe.naver.com/swissfriends/59997' },
+    { name: '융프라우 Jungfrau', lat: 46.5483, lng: 7.9395, price: 160, price_sp: 145, url: 'https://cafe.naver.com/swissfriends/57880' },
+    { name: '피르스트 First', lat: 46.6589, lng: 8.0521, price: 91.6, price_sp: 34, url: 'https://cafe.naver.com/swissfriends/57960' },
+    { name: '멘리헨 Mannlichen', lat: 46.6181, lng: 7.9380, price: 90, price_sp: 34, url: 'https://cafe.naver.com/swissfriends/55622' },
+    { name: '뮈렌 Murren', lat: 46.5610, lng: 7.8827, price: 39.2, price_sp: 0, url: 'https://cafe.naver.com/swissfriends/60147' },
+    { name: '쉬니케 플라테 Schynige', lat: 46.6552, lng: 7.8875, price: 71.6, price_sp: 32, url: 'https://cafe.naver.com/swissfriends/55816' },
+    { name: '하더 쿨름 Harder Kulm', lat: 46.6974, lng: 7.8311, price: 38, price_sp: 19, url: 'https://cafe.naver.com/swissfriends/59997' },
   ] },
   { name: 'Grindelwald', lat: 46.6242, lng: 8.0414, image: '/images/grindelwald.jpg', url: 'https://cafe.naver.com/swissfriends/59687', attractions: [
-    { name: '융프라우 Jungfrau', lat: 46.5483, lng: 7.9395, price: 160, url: 'https://cafe.naver.com/swissfriends/57880' },
-    { name: '피르스트 First', lat: 46.6589, lng: 8.0521, price: 68, url: 'https://cafe.naver.com/swissfriends/57960' },
-    { name: '멘리헨 Mannlichen', lat: 46.6181, lng: 7.9380, price: 74, url: 'https://cafe.naver.com/swissfriends/55622' },
-    { name: '뮈렌 Murren', lat: 46.5610, lng: 7.8827, price: 42.4, url: 'https://cafe.naver.com/swissfriends/60147' },
-    { name: '쉬니케 플라테 Schynige', lat: 46.6552, lng: 7.8875, price: 84.4, url: 'https://cafe.naver.com/swissfriends/55816' },
-    { name: '하더 쿨름 Harder Kulm', lat: 46.6974, lng: 7.8311, price: 46, url: 'https://cafe.naver.com/swissfriends/59997' },
+    { name: '융프라우 Jungfrau', lat: 46.5483, lng: 7.9395, price: 160, price_sp: 145, url: 'https://cafe.naver.com/swissfriends/57880' },
+    { name: '피르스트 First', lat: 46.6589, lng: 8.0521, price: 68, price_sp: 34, url: 'https://cafe.naver.com/swissfriends/57960' },
+    { name: '멘리헨 Mannlichen', lat: 46.6181, lng: 7.9380, price: 74, price_sp: 34, url: 'https://cafe.naver.com/swissfriends/55622' },
+    { name: '뮈렌 Murren', lat: 46.5610, lng: 7.8827, price: 42.4, price_sp: 0, url: 'https://cafe.naver.com/swissfriends/60147' },
+    { name: '쉬니케 플라테 Schynige', lat: 46.6552, lng: 7.8875, price: 84.4, price_sp: 32, url: 'https://cafe.naver.com/swissfriends/55816' },
+    { name: '하더 쿨름 Harder Kulm', lat: 46.6974, lng: 7.8311, price: 46, price_sp: 19, url: 'https://cafe.naver.com/swissfriends/59997' },
   ] },
   { name: 'Luzern', lat: 47.0502, lng: 8.3093, image: '/images/luzern.jpg', url: 'https://cafe.naver.com/swissfriends/45996', attractions: [
-    { name: '리기산 Rigi', lat: 47.0449, lng: 8.4836, price: 78, url: 'https://cafe.naver.com/swissfriends/52888' },
-    { name: '슈탄저호른 Stanserhorn', lat: 46.9784, lng: 8.2565, price: 82, url: 'https://cafe.naver.com/swissfriends/61349' },
-    { name: '필라투스 Pilatus', lat: 46.9784, lng: 8.2565, price: 72, url: 'https://cafe.naver.com/swissfriends/61653' },
-    { name: '티틀리스 Titlis', lat: 46.9784, lng: 8.2565, price: 96, url: 'https://cafe.naver.com/swissfriends/61592' },
-    { name: '슈토스 Stoos', lat: 46.9784, lng: 8.2565, price: 56, url: 'https://cafe.naver.com/swissfriends/61619' },
+    { name: '리기산 Rigi', lat: 47.0449, lng: 8.4836, price: 78, price_sp: 0, url: 'https://cafe.naver.com/swissfriends/52888' },
+    { name: '슈탄저호른 Stanserhorn', lat: 46.9784, lng: 8.2565, price: 82, price_sp: 0, url: 'https://cafe.naver.com/swissfriends/61349' },
+    { name: '필라투스 Pilatus', lat: 46.9784, lng: 8.2565, price: 72, price_sp: 36, url: 'https://cafe.naver.com/swissfriends/61653' },
+    { name: '티틀리스 Titlis', lat: 46.9784, lng: 8.2565, price: 96, price_sp: 48, url: 'https://cafe.naver.com/swissfriends/61592' },
+    { name: '슈토스 Stoos', lat: 46.9784, lng: 8.2565, price: 56, price_sp: 0, url: 'https://cafe.naver.com/swissfriends/61619' },
   ] },
   { name: 'Zermatt', lat: 46.0207, lng: 7.7491, image: '/images/zermatt.jpg', url: 'https://cafe.naver.com/swissfriends/50186', attractions: [
-    { name: '고르너그라트 Gornergrat', lat: 45.9836, lng: 7.7859, price: 126, url: 'https://cafe.naver.com/swissfriends/64892' },
-    { name: '수네가 Sunnegga', lat: 46.0168, lng: 7.7692, price: 28.5, url: 'https://cafe.naver.com/swissfriends/44734' },
-    { name: '블라우헤르트 Blauherd', lat: 46.0196, lng: 7.7682, price: 58.5, url: 'https://cafe.naver.com/swissfriends/44734' },
-    { name: 'Matterhorn Glacier', lat: 45.9384, lng: 7.7275, price: 120, url: 'https://cafe.naver.com/swissfriends/28650' },
+    { name: '고르너그라트 Gornergrat', lat: 45.9836, lng: 7.7859, price: 126, price_sp: 63, url: 'https://cafe.naver.com/swissfriends/64892' },
+    { name: '수네가 Sunnegga', lat: 46.0168, lng: 7.7692, price: 28.5, price_sp: 14, url: 'https://cafe.naver.com/swissfriends/44734' },
+    { name: '블라우헤르트 Blauherd', lat: 46.0196, lng: 7.7682, price: 58.5, price_sp: 59, url: 'https://cafe.naver.com/swissfriends/44734' },
+    { name: 'Matterhorn Glacier', lat: 45.9384, lng: 7.7275, price: 120, price_sp: 60, url: 'https://cafe.naver.com/swissfriends/28650' },
   ] },
   { name: 'Zurich', lat: 47.3769, lng: 8.5417, image: '/images/zurich.jpg', url: 'https://cafe.naver.com/swissfriends/52570' },
   { name: 'Basel', lat: 47.5596, lng: 7.5886, image: '/images/basel.jpg', url: 'https://cafe.naver.com/swissfriends/80' },
@@ -136,7 +136,9 @@ export default function Home() {
   const [selectedCities, setSelectedCities] = useState([]);
   const [transportCosts, setTransportCosts] = useState({});
   const [totalCost, setTotalCost] = useState(0);
+  const [totalCostSPExtra, setTotalCostSPExtra] = useState(0);
   const [segmentCosts, setSegmentCosts] = useState([]);
+  const [segmentCostsSPExtra, setSegmentCostsSPExtra] = useState([]);
   const [selectedSwissPass, setSelectedSwissPass] = useState(244);
   const [selectedJungfrauPass, setSelectedJungfrauPass] = useState(0);
 
@@ -199,7 +201,9 @@ export default function Home() {
   // Calculate total and segment costs
   useEffect(() => {
     let cost = 0;
+    let cost_sp_extra = 0;
     const segments = [];
+    const segmentsSPExtra = [];
     for (let i = 0; i < selectedCities.length - 1; i++) {
       const cityA = selectedCities[i].name;
       const cityB = selectedCities[i + 1].name;
@@ -213,13 +217,17 @@ export default function Home() {
       city.attractions.forEach((attraction) => {
         if (attraction.selected) {
           segments.push(`${city.name} <-> ${attraction.name}: CHF ${attraction.price}`);
+          segmentsSPExtra.push(`${city.name} <-> ${attraction.name}: CHF ${attraction.price_sp}`);
           cost += attraction.price;
+          cost_sp_extra += attraction.price_sp;
         }
       });
     });
 
     setTotalCost(parseFloat(cost.toFixed(1)));
+    setTotalCostSPExtra(parseFloat(cost_sp_extra.toFixed(1)));
     setSegmentCosts(segments);
+    setSegmentCostsSPExtra(segmentsSPExtra);
   }, [selectedCities, transportCosts]);
 
   const handleCityClick = (city) => {
@@ -430,7 +438,7 @@ export default function Home() {
                 Recommend
               </span>
             )}  
-            <h2>패스 합계: <span style={{ color: 'red' }}>CHF {sumPass}</span></h2>
+            <h2>패스 합계: <span style={{ color: 'red' }}>CHF {sumPass+totalCostSPExtra}</span></h2>
           </div>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'space-around' }}>
             {/* Swiss Travel Pass */}
@@ -471,7 +479,13 @@ export default function Home() {
                 display: 'inline-block',     // 인라인 블록
                 width: '45%'                 // 부모 요소 기준 너비 45% 설정
             }}>
-              <h5>Jungfrau VIP Pass</h5>
+              <h5>추가 산악열차</h5>
+              <ul>
+                {segmentCostsSPExtra.map((segment, index) => (
+                  <li key={index}>{segment}</li>
+                ))}
+              </ul>
+              {/* <h5>Jungfrau VIP Pass</h5>
               {Object.entries(JUNGFRAU_VIP_PRICES).map(([key, price]) => (
                 <div className="form-check" key={key}>
                   <input
@@ -487,7 +501,7 @@ export default function Home() {
                     {`${key}: CHF ${price}`}
                   </label>
                 </div>
-              ))}
+              ))} */}
             </div>
           </div>
         </div>
