@@ -315,7 +315,7 @@ export default function Home() {
     }}
   >
     <DndProvider backend={HTML5Backend}>
-      <div style={{ padding: "20px" }}>
+      <div style={{ padding: "10px" }}>
         <h1>🇨🇭Swiss Planner</h1>
         <CityButtonList cities={cities} handleCityClick={handleCityClick} />
 

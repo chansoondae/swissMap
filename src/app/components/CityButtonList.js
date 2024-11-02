@@ -7,7 +7,7 @@ export default function CityButtonList({ cities, handleCityClick }) {
           display: 'flex', 
           flexWrap: 'wrap', 
           justifyContent: 'space-around',  // 수평 정렬: space-around
-          marginBottom: '10px' 
+          marginTop: '10px'
       }}
     >
       {cities.map((city) => (
